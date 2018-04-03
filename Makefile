@@ -7,7 +7,6 @@ init:
 	docker run -d -p 80:8000 --name test_app_1 test_app
 	docker exec -it test_app_1 python manage.py makemigrations app
 	docker exec -it test_app_1 python manage.py migrate
-	docker exec -it test_app_1 python manage.py collectstatic --noinput
 
 bash-api:
 	docker exec -it test_app_1 bash
