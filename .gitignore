@@ -1,0 +1,8 @@
+.idea/
+migrations/
+venv/
+
+*.env
+*.pyc
+*.sqlite3
+*.sqlite3-journal
