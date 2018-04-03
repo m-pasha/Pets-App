@@ -11,5 +11,8 @@ class Pet(models.Model):
         ('CAT', 'Cat')
     )
 
-    type_pet = models.CharField(max_length=3, choices=PET_CHOICES, default='Dog')
+    type_pet = models.CharField(max_length=20, choices=PET_CHOICES, default='Dog')
     birthday = models.DateField()
+
+    def __str__(self):
+        return "%s - %s" % (self.pk, self.name)
